@@ -13,5 +13,6 @@ apt-get install git -yqq
 curl -o /usr/local/bin/phpunit https://phar.phpunit.de/phpunit.phar
 chmod +x /usr/local/bin/phpunit
 
-# install mysql driver
-docker-php-ext-install pdo_mysql
+# install mysql for php
+apt-get install php7.0-mysql
+

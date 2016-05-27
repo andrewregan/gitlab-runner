@@ -9,4 +9,4 @@ before_script:
 test:app:
   script:
   - composer install --no-interaction --no-progress
-  - vendor/bin/phpunit -c ci/phpunit.xml
+  - vendor/bin/phpunit --configuration ci/phpunit.xml

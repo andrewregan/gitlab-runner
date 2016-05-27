@@ -1,2 +1,11 @@
+image: webdevops/php-nginx:debian-8-php7
+
+services:
+  - mysql
+
 before_script:
-  - apt-get update
+  - bash ci/docker_install.sh > /dev/null
+
+test:app:
+  script:
+  - phpunit --configuration phpunit_myapp.xml

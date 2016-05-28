@@ -6,8 +6,8 @@
         "phpunit/phpunit": "5.3.*"
     },
 	"autoload": {
-		"psr-4": {
-            "RunnerTest\\":"src/"
+	    "psr-4": {
+            "Runner\\":"src/"
         }
 	}
 }

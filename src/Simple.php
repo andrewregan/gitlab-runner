@@ -1,5 +1,5 @@
 <?php
-namespace RunnerTest;
+namespace Runner;
 
 class Simple
 {

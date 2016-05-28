@@ -1,5 +1,4 @@
 <?php
-use RunnerTest\Simple;
 
 class SimpleTest extends PHPUnit_Framework_TestCase
 {

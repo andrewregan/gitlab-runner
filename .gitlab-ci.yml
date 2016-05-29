@@ -1,10 +1,11 @@
-image: webdevops/php-nginx:debian-8-php7
+image: andrewregan/gitlab-docker-php
+#image: webdevops/php-nginx:debian-8-php7
 
 services:
   - mysql
 
 before_script:
-  - bash ci/docker_install.sh > /dev/null
+#  - bash ci/docker_install.sh > /dev/null
 
 standard:
   script:
@@ -14,4 +15,4 @@ standard:
   - ./vendor/bin/phpunit -c ci/phpunit.xml
   - ./vendor/bin/phpcs src/ tests/ --standard=PSR2
   - ./vendor/bin/phpmd src/,tests/ text ci/phpmd.xml
-  - csslint src/
+  - csslint src/ --errors=box-model,display-property-grouping,duplicate-properties,empty-rules,known-properties,ajointing-classes,box-sizing,compatible-vendor-prefixes,gradients,text-indent,vendor-prefix,fallback-colors,star-property-hack,underscore-property-hack,bulletproof-font-face,font-faces,import,regex-selectors,universal-selector,unqualified-attributes,zero-units,overqualified-elements,shorthand,duplicate-background-images,floats,font-sizes,ids,important,outline-none,qualified-headings,unique-headings

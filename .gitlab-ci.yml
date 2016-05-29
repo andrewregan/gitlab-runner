@@ -28,4 +28,4 @@ js:
 html:
   image: andrewregan/gitlab-docker-php
   script:
-  - tidy src/
+  - gulp html5-lint

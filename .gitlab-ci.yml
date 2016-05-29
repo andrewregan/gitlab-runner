@@ -1,13 +1,12 @@
-image: andrewregan/gitlab-docker-php
-#image: webdevops/php-nginx:debian-8-php7
-
-services:
-  - mysql
+image: webdevops/php-nginx:debian-8-php7
 
 before_script:
 #  - bash ci/docker_install.sh > /dev/null
 
 php:
+  image: andrewregan/gitlab-docker-php
+  services:
+    - mysql
   script:
   - composer install --no-interaction --no-progress
   - ./vendor/bin/phploc src/
@@ -17,13 +16,16 @@ php:
   - ./vendor/bin/phpmd src/,tests/ text ci/phpmd.xml
 
 css:
+  image: andrewregan/gitlab-docker-php
   script:
   - csslint src/ --errors=box-model,display-property-grouping,duplicate-properties,empty-rules,known-properties,ajointing-classes,box-sizing,compatible-vendor-prefixes,gradients,text-indent,vendor-prefix,fallback-colors,star-property-hack,underscore-property-hack,bulletproof-font-face,font-faces,import,regex-selectors,universal-selector,unqualified-attributes,zero-units,overqualified-elements,shorthand,duplicate-background-images,floats,font-sizes,ids,important,outline-none,qualified-headings,unique-headings
 
 js:
+  image: andrewregan/gitlab-docker-php
   script:
   - jslint '**/*.js'
 
 html:
+  image: andrewregan/gitlab-docker-php
   script:
   - html5validator --root src/

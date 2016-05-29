@@ -16,6 +16,11 @@ apt-get install php7.0-mysql -yqq
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # install npm and css linter
-apt-get install npm -yqq
+apt-get install npm nodejs -yqq
 npm install -g csslint
+npm install -g jslint
 ln -s "$(which nodejs)" /usr/bin/node
+
+# install html5validator
+apt-get install python python-pip -yqq
+pip install html5validator

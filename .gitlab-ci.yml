@@ -6,7 +6,7 @@ services:
 before_script:
   - bash ci/docker_install.sh > /dev/null
 
-test:app:
+standard:
   script:
   - composer install --no-interaction --no-progress
   - ./vendor/bin/phploc src/

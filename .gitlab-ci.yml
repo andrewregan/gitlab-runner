@@ -12,5 +12,5 @@ test:app:
   - ./vendor/bin/phploc src/
   - ./vendor/bin/phpcpd src/
   - ./vendor/bin/phpunit -c ci/phpunit.xml
-  - ./vendor/bin/phpcs src/ --standard=PSR2
-  - ./vendor/bin/phpmd src/ text ci/phpmd.xml
+  - ./vendor/bin/phpcs src/ tests/ --standard=PSR2
+  - ./vendor/bin/phpmd src/,tests/ text ci/phpmd.xml

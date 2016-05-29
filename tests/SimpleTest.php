@@ -1,5 +1,7 @@
 <?php
-use Runner\Simple;
+namespace Runner;
+
+use PHPUnit_Framework_TestCase;
 
 class SimpleTest extends PHPUnit_Framework_TestCase
 {

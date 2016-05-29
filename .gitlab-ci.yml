@@ -28,4 +28,4 @@ js:
 html:
   image: andrewregan/gitlab-docker-php
   script:
-  - html5validator --root src/
+  - tidy src/

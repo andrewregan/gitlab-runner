@@ -21,6 +21,7 @@ npm install -g csslint
 npm install -g jslint
 ln -s "$(which nodejs)" /usr/bin/node
 
-# install html5validator
-apt-get install python python-pip -yqq
-pip install html5validator
+# install html5-tidy
+curl http://binaries.html-tidy.org/binaries/tidy-5.2.0/tidy-5.2.0-64bit.deb -o tidy.deb
+dpkg -i tidy.deb
+rm tidy.deb

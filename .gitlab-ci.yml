@@ -23,3 +23,7 @@ css:
 js:
   script:
   - jslint '**/*.js'
+
+html:
+  script:
+  - html5validator --root src/

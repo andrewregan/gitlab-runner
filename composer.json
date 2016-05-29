@@ -1,9 +1,13 @@
 {
-    "name": "james/runner-test",
+    "name": "andrewregan/runner-test",
     "description": "A simple php-ci test",
     "license": "MIT",
     "require-dev": {
-        "phpunit/phpunit": "5.3.*"
+        "phpunit/phpunit": "*",
+        "phploc/phploc": "*",
+        "phpmd/phpmd" : "@stable",
+        "sebastian/phpcpd": "*",
+        "squizlabs/php_codesniffer": "*"
     },
 	"autoload": {
 	    "psr-4": {

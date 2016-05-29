@@ -9,4 +9,8 @@ before_script:
 test:app:
   script:
   - composer install --no-interaction --no-progress
-  - vendor/bin/phpunit --configuration ci/phpunit.xml
+  - ./vendor/bin/phploc src/
+  - ./vendor/bin/phpcpd src/
+  - ./vendor/bin/phpunit -c ci/phpunit.xml
+  - ./vendor/bin/phpcs src/ --standard=PSR2
+  - ./vendor/bin/phpmd src/ text ci/phpmd.xml

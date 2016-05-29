@@ -14,3 +14,8 @@ apt-get install php7.0-mysql -yqq
 
 # install php composer
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# install npm and css linter
+apt-get install npm -yqq
+npm install -g csslint
+ln -s "$(which nodejs)" /usr/bin/node

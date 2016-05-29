@@ -14,4 +14,4 @@ standard:
   - ./vendor/bin/phpunit -c ci/phpunit.xml
   - ./vendor/bin/phpcs src/ tests/ --standard=PSR2
   - ./vendor/bin/phpmd src/,tests/ text ci/phpmd.xml
-  - csslink src/
+  - csslint src/

@@ -1,5 +1,5 @@
 {
-    "name": "andrewregan/runner-test",
+    "name": "andrewregan/gitlab-runner-test",
     "description": "A simple php-ci test",
     "license": "MIT",
     "require-dev": {

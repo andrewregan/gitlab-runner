@@ -24,8 +24,3 @@ js:
   image: andrewregan/gitlab-docker-php
   script:
   - jslint '**/*.js'
-
-html:
-  image: andrewregan/gitlab-docker-php
-  script:
-  - gulp html5-lint
